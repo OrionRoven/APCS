@@ -1,4 +1,4 @@
-to hi
+to
   print "Hello, world!"
 end
 @#$#@#$#@
