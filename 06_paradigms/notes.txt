@@ -1,3 +1,8 @@
+Orion Roven
+APCS
+HW06 Hello World in netLogo, python, and scheme
+2021-09-28
+
 To run Hello World in netLogo, run type greet into command center of netLogo
 To run Hello World in python, type python hello.py into terminal
 To run Hello World in scheme, run the program in DrRacket and type hi into the command center
