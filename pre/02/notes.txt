@@ -3,3 +3,5 @@ imports a java program
 
 Scanner in = new Scanner(System.in);
 creates a scanner for the reader's input
+
+final int x = 1; means that x cannot be reassigned
