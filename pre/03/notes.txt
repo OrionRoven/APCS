@@ -1,0 +1,12 @@
+Math methods:
+
+Math.sqrt(2) represents √2
+Math.sin(angle) represents sin(angle)
+Math.PI represents π
+Math.E represents Euler's number
+Math.round(x) rounds x and converts it to a long (like an int but can store more values)
+Math.pow(x,y) raises x to the power of y
+
+public static void printTwice(String s) takes input String s (must specify variable type)
+methods can take multiple comma seperated parameters, but each of their types must still be specified
+when invoking a method (calling it in a different method), you don't have to specify the types of the parameters, but you have to comma seperate them

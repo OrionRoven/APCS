@@ -1,0 +1,24 @@
+ping() prints "." and makes a new line
+  the outpout is . and then a new line
+baffle() prints "wug" and invokes ping()
+  the output is wug. and then a new line
+zoop() invokes baffle(), prints "You wugga " and then invokes baffle() again
+  the output is:
+  wug.
+  You wugga wug.
+the main method prints "No, I ", invokes zoop(), prints "I ", then invokes baffle()
+  the output is:
+  No, I wug.
+  You wugga wug.
+  I wug.
+
+The first time ping() is invoked the state of the program is:
+  No, I wug.
+  (this is after ping() runs and there is a new line after)
+
+If we invoke baffle() at the end of the ping() method, we we will it will return:
+  No, I wug.
+  wug.
+  wug.
+  and keeps going
+  then it gats a StackOverflowError, because the output it too big for java to handle
