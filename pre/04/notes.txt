@@ -1,0 +1,22 @@
+Relational operators are used for if statements
+  x==y (x equal y), x!=y (x does not equal y), x>y (x is greater than y) x<=y (x is less than or equal to y)
+  outputs are true or false (boolean values)
+  can't compare strings and ints (5=='5')
+Logical operators
+  && means and
+  || means or
+  ! means not
+
+if (<conditonal>) {
+  //do stuff
+} else if (<conditional>) {
+  //do stuff
+} else {
+  //do stuff
+}
+
+boolean value stores something that is true or false:
+boolean iAmCool = true;
+return; ends a method prematurely
+a method that invokes itself is called recursive
+a StackOverflow error happens when a recursive function never returns and the stack overflows
