@@ -14,6 +14,6 @@ public class BankAccount {
 	}
 	
 	public static void main(String[] args){
-		acctHolder=SetAcct("Von Geburt");
+		SetAcct("Von Geburt");
 	}
 }
