@@ -1,19 +1,30 @@
+/*
+Trio number int x (Orion Roven, May Qiu, Lawrence Joa)
+APCS
+HW18_BankAccount (use UML diagram)
+10/14/21
+DISCO:
+main must be static
+
+QCC:
+if main has to reference SetAcct, and SetAcct has to reference acctHolder, than wouldn't acctHolder have to be a static instance variable (it works if it is)
+*/
+
 public class BankAccount {
 	private String acctHolder;
 	private String password;
 	private int pin;
 	private int accountNum;
 	private double bal;
-	
-	public static String SetAcct(String name){//, String pw, int PINput, int acctNum, double startingBal){
-		return name;
-		//System.out.println("Account Holder: "+acctHolder);
-		//password=pw;
-		//pin=PINput;
-		//accountNum=acctNum;
+
+	public void SetAcctHolder(String name){
+		acctHolder=name;
 	}
-	
+
 	public static void main(String[] args){
-		SetAcct("Von Geburt");
+		BankAccount myDuck = new BankAccount();
+		myDuck.SetAcctHolder("Von Geburt");
+
+		System.out.println(myDuck.acctHolder);
 	}
 }
