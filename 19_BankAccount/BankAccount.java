@@ -7,6 +7,7 @@ HW19 -- Mo Money Mo Problems ...MORE AWESOME
 DISCO:
 || is used in boolean statements to represent the word "or"
 e.g. if(x||y){//do stuff} means that the conditional will only happen if x is true or y is true.
+for authenticate(), we can create a copy of myDuck called myCopyDuck, and test myCopyDuck against the parameters of authenticate()
 
 QCC:
 our withdraw method and the one in the library repo are void (meaning that it doesn't return anything), so how can we return True or False if the method doesn't have a boolean return type?
@@ -42,29 +43,38 @@ public class BankAccount {
     public void WithdrawMoney(double moneySpent){
         if (bal<moneySpent){
           System.out.println("you are broke");
+        } else {
+          bal= bal - moneySpent;
         }
-        bal= bal - moneySpent;
     }
 
-    public static void PrintInfo(String accttholder, String password, int pin, int accountNum, int bal, double paycheck, double moneySpent){
-                BankAccount myDuck = new BankAccount();
+    public static boolean authenticate(int maybeAcctNum, String maybePw){
+        BankAccount myCopyDuck = new BankAccount();
 
-                myDuck.SetAcctInfo("Von Geburt","nunyazbizniz",3217,448922391,1);
-                myDuck.DepositMoney(.05);
-                myDuck.WithdrawMoney(.5);
+        myCopyDuck.SetAcctInfo("Von Geburt","nunyazbizniz",3217,448922391,1);//set myCopyDuck to the same as myDuck
 
-                System.out.println("account holder: "+myDuck.acctHolder);
-                System.out.println("password: "+myDuck.password);
-                System.out.println("pin: "+myDuck.pin);
-                System.out.println("account number: " +myDuck.accountNum);
-                if (myDuck.bal==1) {
-                    System.out.println("balance: "+myDuck.bal+" dollar");
-                } else {
-                    System.out.println("balance: "+myDuck.bal+ " dollars");
-                }
+        if (maybeAcctNum==myCopyDuck.accountNum && maybePw==myCopyDuck.password){
+          return true;
+        } else {
+          return false;
+        }
     }
-    
+
     public static void main(String[] args){
-        PrintInfo("Von Geburt", "nunyazbizniz", 3217, 448922391, 1, .05, .5);
+      BankAccount myDuck = new BankAccount();
+
+      myDuck.SetAcctInfo("Von Geburt","nunyazbizniz",3217,448922391,1);
+      myDuck.DepositMoney(.05);
+      myDuck.WithdrawMoney(.5);
+      System.out.println("account holder: "+myDuck.acctHolder);
+      System.out.println("password: "+myDuck.password);
+      System.out.println("pin: "+myDuck.pin);
+      System.out.println("account number: " +myDuck.accountNum);
+      if (myDuck.bal==1) {
+          System.out.println("balance: "+myDuck.bal+" dollar");
+      } else {
+          System.out.println("balance: "+myDuck.bal+ " dollars");
+      }
+      System.out.println(authenticate(448922391,"nunyazbizniz"));
     }
 }
