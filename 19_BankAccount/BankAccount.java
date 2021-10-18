@@ -7,7 +7,8 @@ HW19 -- Mo Money Mo Problems ...MORE AWESOME
 DISCO:
 || is used in boolean statements to represent the word "or"
 e.g. if(x||y){//do stuff} means that the conditional will only happen if x is true or y is true.
-for authenticate(), we can create a copy of myDuck called myCopyDuck, and test myCopyDuck against the parameters of authenticate()
+if we try to compare the parameters of authenticate() to the values in myDuck in the authenticate() method, then we get a static error because myDuck is not defined in the authenticate() method
+a solution to this is for authenticate(), we can create a copy of myDuck called myCopyDuck, and test myCopyDuck against the parameters of authenticate()
 
 QCC:
 our withdraw method and the one in the library repo are void (meaning that it doesn't return anything), so how can we return True or False if the method doesn't have a boolean return type?
