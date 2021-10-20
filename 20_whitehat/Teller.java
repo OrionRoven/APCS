@@ -1,7 +1,7 @@
 /**
    Trio Number Int X (Orion Roven, Lawrence Joa, May Qiu) / Swag Trio
    APCS pd7
-   HW18 -- building a more meaningful class
+   HW20 -- being whiteHat hackers
    2021-10-18
 DISCO:
 We can create an object whiteHat in class BankAccount from class Teller;
