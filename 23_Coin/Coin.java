@@ -6,8 +6,15 @@ Time Overlapsed - 1hr 4 minutes
 
 DISCO:
 Math.random() return value from 0.0 to 1.0
+If we set bias in flip(), and not the default constructor, it works!
+methods can take object parameters
+public <ReturnType> <MethodName> (<ClassName> <ObjectName>){
+  //can now use System.out.println(<ObjectName>.upFace);
+}
+
 QCC:
 Even when the Math.random() is less than bias, it still return tails.
+Not really sure why tho.
 
 */
 
@@ -62,25 +69,25 @@ public class Coin {
 
   // Accessors...
   // ----------------------------
-  // public String getUpFace() {
-  //   return upFace;
-  // }
-  //
-  // public int getFlipCtr() {
-  //   return flipCtr;
-  // }
-  //
-  // public double getValue() {
-  //   return value;
-  // }
-  //
-  // public int getHeadsCtr() {
-  //   return headsCtr;
-  // }
-  //
-  // public int getTailsCtr() {
-  //   return tailsCtr;
-  // }
+  public String getUpFace() {
+    return upFace;
+  }
+
+  public int getFlipCtr() {
+    return flipCtr;
+  }
+
+  public double getValue() {
+    return value;
+  }
+
+  public int getHeadsCtr() {
+    return headsCtr;
+  }
+
+  public int getTailsCtr() {
+    return tailsCtr;
+  }
   // ----------------------------
 
 
@@ -116,12 +123,12 @@ public class Coin {
    * Returns "heads" or "tails"
    ***/
   public String flip() {
+    bias=.5;
     double result = Math.random();
-    System.out.println(result);
-    if (result>=bias) {//heads
+    if (result>=bias) {
       upFace="tails";
       tailsCtr+=1;
-    } else if (result<bias) {//tails
+    } else {
       upFace="heads";
       headsCtr+=1;
     }
@@ -136,9 +143,13 @@ public class Coin {
    * postcond: Returns true if both coins showing heads
    * or both showing tails. False otherwise.
    ***/
-  // public boolean equals( Coin other ) {
-  //   return false;
-  // }
+  public boolean equals( Coin other ) {
+    if (upFace==other.upFace){
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 
   /***

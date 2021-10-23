@@ -26,25 +26,24 @@ public class Driver {
       //test 2nd overloaded constructor
       Coin wayne = new Coin( "dollar", "heads" );
       //test toString() methods of each Coin
-      System.out.println("mine: " + mine.name);
-      System.out.println("yours: " + yours.name);
-      System.out.println("wayne: " + wayne.name);
+      System.out.println("mine: " + mine.name+" -- "+mine.upFace);
+      System.out.println("yours: " + yours.name+" -- "+yours.upFace);
+      System.out.println("wayne: " + wayne.name+" -- "+wayne.upFace);
 
       //test flip() method
       System.out.println("\nAfter flipping...");
-      yours.flip();
-      wayne.flip();
+      yours.upFace=yours.flip();
+      wayne.upFace=wayne.flip();
       System.out.println("yours: " + yours.upFace);
       System.out.println("wayne: " + wayne.upFace);
-      /*
+
       //test equals() method
       if ( yours.equals(wayne) ) {
-        System.out.println( "Matchee matchee!" );
+        System.out.println( "\nMatchee matchee!" );
       }
       else {
-        System.out.println( "No match. Firestarter you can not be." );
+        System.out.println( "\nNo match. Firestarter you can not be." );
       }
-      ====================BOTTOM======================*/
 
   }//end main()
 
