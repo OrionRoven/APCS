@@ -2,7 +2,7 @@
 APCS
 HW23_Coin - What Does Equality Look Like
 10/23/21
-Time Overlapsed - 1hr 4 minutes
+Time Overlapsed - 1hr 25 minutes
 
 DISCO:
 Math.random() return value from 0.0 to 1.0
@@ -97,9 +97,9 @@ public class Coin {
    * postcond: instvar value gets appropriate value
    * Returns value assigned.
    ***/
-  // private double assignValue( String s ) {
-  //   return s;
-  // }
+  private double assignValue( String s ) {
+    return s;
+  }
 
 
   /***
