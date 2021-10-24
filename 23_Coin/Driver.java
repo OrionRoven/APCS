@@ -26,16 +26,16 @@ public class Driver {
       //test 2nd overloaded constructor
       Coin wayne = new Coin( "dollar", "heads" );
       //test toString() methods of each Coin
-      System.out.println("mine: " + mine.name+" -- "+mine.upFace);
-      System.out.println("yours: " + yours.name+" -- "+yours.upFace);
-      System.out.println("wayne: " + wayne.name+" -- "+wayne.upFace);
+      System.out.println("mine: " + mine);
+      System.out.println("yours: " + yours);
+      System.out.println("wayne: " + wayne);
 
       //test flip() method
       System.out.println("\nAfter flipping...");
       yours.upFace=yours.flip();
       wayne.upFace=wayne.flip();
-      System.out.println("yours: " + yours.upFace);
-      System.out.println("wayne: " + wayne.upFace);
+      System.out.println("yours: " + yours);
+      System.out.println("wayne: " + wayne);
 
       //test equals() method
       if ( yours.equals(wayne) ) {

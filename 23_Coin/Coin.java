@@ -12,9 +12,11 @@ public <ReturnType> <MethodName> (<ClassName> <ObjectName>){
   //can now use System.out.println(<ObjectName>.upFace);
 }
 
+
 QCC:
 Even when the Math.random() is less than bias, it still return tails.
 Not really sure why tho.
+Why do we need assignValue if we aren't calculating the value of the coins?
 
 */
 
@@ -98,7 +100,18 @@ public class Coin {
    * Returns value assigned.
    ***/
   private double assignValue( String s ) {
-    return s;
+    if (s == "penny") {
+      value = 0.01;
+    } else if (s == "nickel") {
+      value = 0.05;
+    } else if (s == "dime") {
+      value = 0.10;
+    } else if (s == "quarter") {
+      value = 0.25;
+    } else if (s == "dollar") {
+      value = 1.00;
+    }
+    return value;
   }
 
 
@@ -157,8 +170,8 @@ public class Coin {
    * precond: n/a
    * postcond: Return String comprised of name and current face
    ***/
-  // public String toString() {
-  //
-  // }
+  public String toString() {
+    return name+" -- "+upFace;
+  }
 
 }//end class
