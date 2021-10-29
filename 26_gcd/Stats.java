@@ -46,8 +46,8 @@ public class Stats {
   }
 
   public static void main(String[] args){
-    System.out.println(gcd(10,20));
-    System.out.println(gcdER(30,12));
-    System.out.println(gcdEW(27,9));
+    System.out.println(gcd(69,420));
+    // System.out.println(gcdER(30,12));
+    // System.out.println(gcdEW(27,9));
   }
 }
