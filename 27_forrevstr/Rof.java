@@ -11,7 +11,7 @@
 public class Rof {
     public String fenceF(int posts) {
         String fence = "|";
-        for (int i = 0; i < posts; i++) {
+        for (int i = 1; i < posts; i++) {
             fence += "--|";
         }
         return fence;
@@ -37,7 +37,7 @@ public class Rof {
         Rof rof = new Rof();
         System.out.println("---- For Fence -----");
         System.out.println(rof.fenceF(3));
-        System.out.println(rof.fenceF(-1));
+        System.out.println(rof.fenceF(2));
         System.out.println(rof.fenceF(7));
 
         System.out.println("---- For Reverse -----");
