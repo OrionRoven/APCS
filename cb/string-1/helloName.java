@@ -1,4 +1,5 @@
-public String helloName(String name) {
-  return "Hello "+name+"!";
+public class helloName{
+	public String helloName(String name) {
+	  return "Hello "+name+"!";
+	}
 }
-
