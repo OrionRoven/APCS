@@ -1,0 +1,7 @@
+public static <returntype> <methodName>(<args>){
+ <body>
+}
+
+a void method has doesn't return a value
+boolean methods return true or false
+a recursive method returns a call for the same method, and must have a base case
