@@ -1,0 +1,13 @@
+while (boolean) {
+  <body>
+}
+*if boolean is true, runs body until the boolean is false
+
+for (<initializeVariables>; <boolean>; <increment/variableUpdate>) {
+  <body>
+}
+*initializes variables (requires type specifications)
+*while boolean is true, runs body until false
+*after each time the body is run, the increment/variable update is applied
+
+when a loop hits a break; statement, the loop is automatically terminated
