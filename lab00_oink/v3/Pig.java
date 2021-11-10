@@ -34,7 +34,7 @@
  *
  * class Pig
  * a Pig Latin translator
- * ~~~~~~~~~~~~~~~~~~~ V2 ~~~~~~~~~~~~~~~~~~~
+ * ~~~~~~~~~~~~~~~~~~~ V3 ~~~~~~~~~~~~~~~~~~~
  *           9
  *     ,--.-'-,--.
  *     \  /-~-\  /
@@ -186,6 +186,8 @@ public class Pig {
 
         // using scanner for engToPig
         while (sc.hasNext()) {
+            // Found using Java Platform SE 7 documentation about the Scanner class
+            // https://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html
             // VERY CRITICAL -- nextLine() method!!
             // allows scanner to read whitespace as part of the word (CRITICAL FOR SENTENCES) -- otherwise, the scanner would split a sentence into its words
             /*
