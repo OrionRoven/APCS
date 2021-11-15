@@ -14,9 +14,6 @@ QCC:
 -can we make a linSearchR or freqRec without the additional parameter start?
 */
 
-import java.math.*;
-import java.util.Arrays;
-
 public class Loopier {
   static int[] paul = new int[10];
 
