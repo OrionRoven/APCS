@@ -17,11 +17,11 @@ QCC:
 import java.math.*;
 import java.util.Arrays;
 
-public class Main {
+public class Loopier {
   static int[] paul = new int[10];
 
   public static void main(String[] args) {
-      Main tim = new Main();
+      Loopier tim = new Loopier();
       tim.populateArray(paul);
       //System.out.println(Arrays.toString(paul));
       // System.out.println(tim.arrToString(paul));
