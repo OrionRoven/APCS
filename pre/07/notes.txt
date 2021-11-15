@@ -1,0 +1,21 @@
+int[] fred;
+fred = new int[5];
+
+or int[] counts = new int[4];
+
+fred is an array has a length of 5 (array[0] to array[4])
+
+while loops are commonly used to index arrays:
+int i=0;
+while (i<100) {       //indexes 100 times
+  System.out.println(fred[i]);
+}
+
+import java.util.Arrays;
+System.out.println(Arrays.toString(fred)); // output is [stuff in fred]
+
+to copy an array:
+double[] George = Arrays.copyOf(fred, 3);
+
+length of array:
+fred.length not fred.length()
