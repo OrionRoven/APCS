@@ -9,7 +9,8 @@ DISCO:
 -java.util.Arrays has a built in Arrays to String method.
 -returning 1 + freqRec(arr, start + 1, target) allows us to add to a counter while continuing to make recursive calls.
 -when typecasting a random number, it is crucial to say (int) (Math.random() * 100) rather than (int) Math.random() * 100 because the latter typecasts the random number between 0 and 1 which will always be 0.
--
+- We can use our own method to convert an array into a string.
+
 QCC:
 -can we make a linSearchR or freqRec without the additional parameter start?
 */
