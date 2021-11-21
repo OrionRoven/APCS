@@ -25,4 +25,6 @@ Logic errors
   program compiles but doesn't work
   possibly used integer division
   == vs. .equals()
+    == is used for comparing primitive datatypes
+    .equals() is used to compare objects
   procure rubber ducky
