@@ -1,0 +1,30 @@
+Debugging
+
+Compile-time errors
+  improper syntax
+    missing semicolon
+  static problems
+  "" for strings, '' for characters
+  debugging by bisection
+    comment out half the code, if it compiles, then the error is in the part you commented out
+
+Run-time errors
+  StackOverflowError
+    infinite recursion
+    infinite loop (while or for)
+  NullPointerException
+    you tried to access an instance variable or invoke a method on an object that is currently null
+  ArrayIndexOutOfBoundsException
+    called an index of an array that doesn't exist
+  FileNotFoundException
+    could have forgotten to import something
+  ArithmeticException
+    arithmetic went wonky (possibly divided by 0)
+
+Logic errors
+  program compiles but doesn't work
+  possibly used integer division
+  == vs. .equals()
+    == is used for comparing primitive datatypes
+    .equals() is used to compare objects
+  procure rubber ducky
