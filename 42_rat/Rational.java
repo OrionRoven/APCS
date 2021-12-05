@@ -24,6 +24,12 @@ public class Rational {
         r.add(s);
         System.out.println(r);
 
+        Rational t = new Rational(4,18);
+        t.reduce();
+        System.out.println(t);
+
+
+
 
     }
 
