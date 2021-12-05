@@ -1,16 +1,14 @@
 /*
 Team Incredibly Cohesive (David Chen, Jaylen Zeng, Orion Roven)
 APCS pd7
-HW41 -- Be Rational
-12/1/21
-time elapsed: 0.3 hours
+HW42 -- Be More Rational
+12/2/21
+time elapsed: 0.2 hours
+
 DISCO:
-When we say r.multiply(s), in the multiply method, this refers to r and the parameter num refers to s
-If we set rational r to x/0, then r defaults to the word Infinity
-To fix this, in the divide and multiply methods we added a if statement that checks if the denominator is 0, and if it is, it returns from the method
+In order for gcd to work, we need to start checking for gcd at the minimum value between the numerator, because a smaller number % a bigger number will return the smaller number
+
 QCC:
-I thought that there were math errors that happen in java when a number is divided by 0
-Why in this case do the numbers divided by 0 become Infinity
 */
 
 public class Rational {
@@ -18,41 +16,15 @@ public class Rational {
     private int numerator;
 
     public static void main(String[] args) {
+        Rational a = new Rational(6, 8);
+        System.out.println(a.gcd());
+
         Rational r = new Rational(2, 3);
         Rational s = new Rational(1, 2);
-        Rational t = new Rational();
+        r.add(s);
+        System.out.println(r);
 
-        System.out.println("----Test toString()----");
-        System.out.println(r + " expected: 2/3");
-        System.out.println(s + " expected: 1/2");
-        System.out.println(t + " expected: 0/1");
 
-        System.out.println("----Test floatValue()----");
-        System.out.println(r.floatValue() + " expected: 0.6666666666666666");
-        System.out.println(s.floatValue() + " expected: 0.5");
-        System.out.println(t.floatValue() + " expected: 0.0");
-
-        System.out.println("----Test multiply()----");
-        Rational g = new Rational(2, 13);
-        Rational h = new Rational(3, 17);
-        g.multiply(h);
-        System.out.println(g + " expected: 6/221");
-
-        Rational u = new Rational(1, 2);
-        Rational v = new Rational(1, 3);
-        u.multiply(v);
-        System.out.println(u + " expected: 1/6");
-
-        System.out.println("----Test divide()----");
-        Rational w = new Rational(3, 2);
-        Rational x = new Rational(9, 5);
-        w.divide(x);
-        System.out.println(w + " expected: 15/18");
-
-        Rational y = new Rational(8, 2);
-        Rational z = new Rational(0, 3);
-        y.divide(z);
-        System.out.println(y + " expected: 8/2"); // remains the same because division by zero is not allowed
     }
 
     public Rational() {
@@ -96,17 +68,39 @@ public class Rational {
     }
 
     public int gcd() {
-      int tempNum = this.numerator;
-      int tempDenom = this.denominator;
-      while (tempNum != tempDenom) {
-        if (tempNum > tempDenom) {
-          tempNum -= tempDenom;
+        int gcd = Math.min(this.numerator, this.denominator);
+        while (gcd < this.numerator || gcd < this.denominator) {
+            if (this.numerator % gcd == 0 && this.denominator % gcd == 0) {
+                break;
+            }
+            gcd--;
         }
-        else {
-          tempDenom -= tempNum;
+        return gcd;
+    }
+
+    public void add(Rational num) {
+        this.numerator = this.numerator * num.denominator + this.denominator * num.numerator;
+        this.denominator = this.denominator * num.denominator;
+    }
+
+    public void subtract(Rational num) {
+        this.numerator = this.numerator * num.denominator - this.denominator * num.numerator;
+        this.denominator = this.denominator * num.denominator;
+    }
+
+    public void reduce() {
+        int gcd = this.gcd();
+        this.numerator /= gcd;
+        this.denominator /= gcd;
+    }
+
+    public int compareTo(Rational num) {
+        if (this.floatValue() > num.floatValue()) {
+            return 1;
+        } else if (this.floatValue() < num.floatValue()) {
+            return -1;
         }
-      }
-      return tempNum;
+        return 0;
     }
 
 }
