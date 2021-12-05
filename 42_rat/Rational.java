@@ -6,7 +6,7 @@ HW42 -- Be More Rational
 time elapsed: 0.2 hours
 
 DISCO:
-In order for gcd to work, we need to start checking for gcd at the minimum value between the numerator, because a smaller number % a bigger number will return the smaller number
+In order for gcd to work we need to start checking for gcd at the minimum value between the numerator and the demonitator, smaller number % a bigger number will return the smaller number
 
 QCC:
 */
