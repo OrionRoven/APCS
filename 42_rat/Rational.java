@@ -28,9 +28,10 @@ public class Rational {
         t.reduce();
         System.out.println(t);
 
-
-
-
+        Rational x = new Rational(4, 3);
+        Rational y = new Rational(1, 5);
+        x.subtract(y);
+        System.out.println(x);
     }
 
     public Rational() {
