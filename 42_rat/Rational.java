@@ -3,12 +3,15 @@ Team Incredibly Cohesive (David Chen, Jaylen Zeng, Orion Roven)
 APCS pd7
 HW42 -- Be More Rational
 12/2/21
-time elapsed: 0.2 hours
+time elapsed: 0.6 hours
 
 DISCO:
-In order for gcd to work we need to start checking for gcd at the minimum value between the numerator and the demonitator, smaller number % a bigger number will return the smaller number
+In order for gcd to work we need to start checking for gcd at the minimum value between the numerator and the demonitator
+smaller number % a bigger number will return the smaller number
+because our compareTo() method uses the .floatValue() method to check if the rationals are equal, a non-reduced rational is equal to a reduced rational
 
 QCC:
+Is there a way to use .reduce() in compareTo() that will yield the same results as using .floatValue()?
 */
 
 public class Rational {
@@ -32,6 +35,14 @@ public class Rational {
         Rational t = new Rational(4,18);
         t.reduce();
         System.out.println(t);
+
+        Rational q = new Rational(1, 2);
+        Rational u = new Rational(1, 2);
+        Rational v = new Rational(2, 4);
+        System.out.println(q.compareTo(u));//0
+        System.out.println(q.compareTo(v));
+        System.out.println(q.compareTo(t));
+        System.out.println(q.compareTo(r));
     }
 
     public Rational() {
