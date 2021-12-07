@@ -26,7 +26,7 @@ public class SuperArray {
     // default constructor – initializes 10-item array
     public SuperArray() {
         /* YOUR IMPLEMENTATION HERE */
-        this._data = new int[10];
+        this._data = new int[0];
         this._size = this._data.length;
     }
 
