@@ -53,6 +53,8 @@ public class Rational {
         Rational z = new Rational(0, 3);
         y.divide(z);
         System.out.println(y + " expected: 8/2"); // remains the same because division by zero is not allowed
+
+        Rational
     }
 
     public Rational() {
