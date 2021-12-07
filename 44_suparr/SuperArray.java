@@ -26,7 +26,7 @@ public class SuperArray {
     // default constructor – initializes 10-item array
     public SuperArray() {
         /* YOUR IMPLEMENTATION HERE */
-        this._data = new int[0];
+        this._data = new int[10];
         this._size = this._data.length;
     }
 
@@ -75,6 +75,19 @@ public class SuperArray {
         }
         temp[this._size]=num;
         _data=temp;
+        _size++;
+    }
+
+    public void addAtIndex(int index, int num) {
+        int[] temp = new int[this._size+1];
+        for (int i = 0; i < index; i++) {
+          temp[i]=_data[i];
+        }
+        temp[index]=num;
+        for (int i = index+1; i < this._size; i++) {
+          temp[i+1]=_data[i];
+        }
+        _data=temp;
     }
 
     // main method for testing
@@ -93,9 +106,11 @@ public class SuperArray {
             System.out.println(curtis);
         }
         SuperArray ra = new SuperArray();
-        System.out.println(ra);
+        System.out.println("Initial ra: "+ra);
         ra.add(5);
-        System.out.println(ra);
+        System.out.println("Ra after adding 5: "+ra);
+        ra.addAtIndex(2, 7);
+        System.out.println("AddAtIndex ra: "+ra);
     }// end main()
 
 }
