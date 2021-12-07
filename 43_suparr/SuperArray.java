@@ -18,82 +18,72 @@ QCC:
  * getting and setting element values.
  ***************************/
 
-public class SuperArray
-{
+public class SuperArray {
 
-  private int[] _data;  //underlying container
-  private int _size;    //number of elements in this SuperArray
+    private int[] _data; // underlying container
+    private int _size; // number of elements in this SuperArray
 
-
-  //default constructor – initializes 10-item array
-  public SuperArray()
-  {
-    _data = new int[10];
-    _size = 10;
-  }
-
-  //output SuperArray in [a,b,c] format
-  public String toString()
-  {
-    String result = "[";
-    for (int i = 0; i < _data.length; i++) {
-      result += _data[i];
-      if (i != _data.length - 1) {
-        result += ", ";
-      }
+    // default constructor – initializes 10-item array
+    public SuperArray() {
+        /* YOUR IMPLEMENTATION HERE */
+        this._data = new int[10];
+        this._size = this._data.length;
     }
-    return result + "]";
-  }
 
-
-  //double capacity of SuperArray
-  private void expand()
-  {
-    int[] holder = _data;
-    _data = new int[_size*2];
-    for (int i = 0; i < _size; i++) {
-      _data[i] = holder[i];
+    // output SuperArray in [a,b,c] format
+    public String toString() {
+        String result = "[";
+        for (int i = 0; i < _data.length; i++) {
+            result += _data[i];
+            if (i != _data.length - 1) {
+                result += ", ";
+            }
+        }
+        return result + "]";
     }
-    _size = _size * 2;
-  }
 
+    // double capacity of SuperArray
+    private void expand() {
+        /* YOUR IMPLEMENTATION HERE */
+        int[] temp = new int[_data.length * 2];
+        for (int i = 0; i < _data.length; i++) {
+            temp[i] = _data[i];
+        }
+        this._data = temp;
+        this._size *= 2;
+    }
 
-  //accessor -- return value at specified index
+    // accessor -- return value at specified index
+    public int get(int index) {
+        /* YOUR IMPLEMENTATION HERE */
+        return this._data[index];
+    }
 
-//  public int get( int index )
-//  {
-    /* YOUR IMPLEMENTATION HERE */
-//  }
+    // mutator -- set value at index to newVal,
+    // return old value at index
+    public int set(int index, int newVal) {
+        /* YOUR IMPLEMENTATION HERE */
+        int oldVal = this._data[index];
+        this._data[index] = newVal;
+        return oldVal;
+    }
 
+    // main method for testing
+    public static void main(String[] args) {
+        SuperArray curtis = new SuperArray();
+        System.out.println("Printing empty SuperArray curtis...");
+        System.out.println(curtis);
+        for (int i = 0; i < curtis._data.length; i++) {
+            curtis.set(i, i * 2);
+        }
+        System.out.println("Printing populated SuperArray curtis...");
+        System.out.println(curtis);
+        for (int i = 0; i < 3; i++) {
+            curtis.expand();
+            System.out.println("Printing expanded SuperArray curtis...");
+            System.out.println(curtis);
+        }
+    }// end main()
 
-  //mutator -- set value at index to newVal,
-  //           return old value at index
-  public int set( int index, int newVal )
-  {
-    _data[index] = newVal;
-    return index;
-  }
-
-
-  //main method for testing
-  public static void main( String[] args )
-  {
-      SuperArray curtis = new SuperArray();
-      System.out.println( "Printing empty SuperArray curtis..." );
-      System.out.println( curtis );
-      for( int i = 0; i < curtis._data.length; i++ ) {
-      curtis.set( i, i * 2 );
-      }
-      System.out.println("Printing populated SuperArray curtis...");
-      System.out.println(curtis);
-      for( int i = 0; i < 3; i++ ) {
-      curtis.expand();
-      System.out.println("Printing expanded SuperArray curtis...");
-      System.out.println(curtis);
-      }
-      /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
-  }//end main()
-
-
-}//end class
+}
+// end class
