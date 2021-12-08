@@ -1,14 +1,10 @@
 /*
 Team Incredibly Cohesive (David Chen, Jaylen Zeng, Orion Roven)
 APCS pd7
-HW43 -- Array of Steel
-12/6/21
-time elapsed: 0.3 hours
+HW43 -- Array of Grade 316
+12/7/21
+time elapsed: 0. hours
 DISCO:
-*We can change the size of our arrays by creating a completely new one.
-Ex: Assuming _data orginally has 10 indices, _data = new int[20];
-Now _data should have 20 indices.
-*
 QCC:
 */
 
@@ -90,6 +86,13 @@ public class SuperArray {
         _data=temp;
     }
 
+    public void remove(int index) {
+        int[] temp = new int[this._size-1];
+        for (int i=0; i<_size-1; i++) {
+            
+        }
+    }
+
     // main method for testing
     public static void main(String[] args) {
         SuperArray curtis = new SuperArray();
@@ -105,12 +108,15 @@ public class SuperArray {
             System.out.println("Printing expanded SuperArray curtis...");
             System.out.println(curtis);
         }
+
         SuperArray ra = new SuperArray();
         System.out.println("Initial ra: "+ra);
         ra.add(5);
-        System.out.println("Ra after adding 5: "+ra);
+        System.out.println("Ra after adding 5: ");
+        System.out.println(ra);
         ra.addAtIndex(2, 7);
-        System.out.println("AddAtIndex ra: "+ra);
+        System.out.println("AddAtIndex ra: ");
+        System.out.println(ra);
     }// end main()
 
 }
