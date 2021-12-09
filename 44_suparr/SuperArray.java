@@ -7,7 +7,7 @@ time elapsed: 0.8 hours
 DISCO:
 our program requires a ton of memory because we have to create new temporary arrays and loop through them so the visualizer isn't helpful because it exceeds the time limit
 QCC:
-is there a simpler way to code toString() so that we don't have to loop through the array and exceed the visualizer time limit
+is there a simpler way to code toString() so that we don't have to loop through the array and exceed the visualizer time
 */
 public class SuperArray {
 
