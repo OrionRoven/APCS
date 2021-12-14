@@ -110,7 +110,7 @@ public class GuessNumber
   //main method to run it all
   public static void main( String[] args )
   {
-    GuessNumber g = new GuessNumber(1,100);
+    GuessNumber g = new GuessNumber(1,2);
     //start the game
     g.play();
   }
