@@ -110,7 +110,7 @@ public class SuperArray {
         ra.add(5);
         System.out.println("Ra after adding 5: "+ra);
         ra.addAtIndex(2, 7);
-        System.out.println("AddAtIndex ra: "+ra);
+        System.out.println("AddAtIndex(2, 7) ra: "+ra);
     }// end main()
 
 }
