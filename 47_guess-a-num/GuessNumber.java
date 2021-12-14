@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
+// Team Incredibly Cohesive
 // APCS pd0
-// HW47 -- ?
+// HW47 -- Guess Again
 // 2021-12-15w
-// time spent: _ hrs
+// time spent:  hrs
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -48,7 +48,7 @@ public class GuessNumber
     //pick random number in range [a,b]
 
     _target = _lo;
-    _target += Math.random() * (_hi-_lo);
+    _target += Math.random() * (_hi-_lo+1);
   }
 
 
@@ -81,9 +81,18 @@ public class GuessNumber
       guess = sc.nextInt();
 
       //3 cases: we either found it, too hi, too lo
-
-      /* YOUR CODE HERE */
-
+      if (guess == _target) {
+        System.out.println("Correct! It took "+_guessCtr+" guesses.");
+        break;
+      }
+      else if (guess < _target) {
+        _lo=guess;
+        System.out.println("Too low, try again...");
+      }
+      else {
+        _hi=guess;
+        System.out.println("Too high, try again...");
+      }
       _guessCtr++;
     }
   }
@@ -101,12 +110,9 @@ public class GuessNumber
   //main method to run it all
   public static void main( String[] args )
   {
-    /*-----------------------------
-    //instantiate a new game
     GuessNumber g = new GuessNumber(1,100);
     //start the game
     g.play();
-    -----------------------------*/
   }
 
 }//end class GuessNumber
