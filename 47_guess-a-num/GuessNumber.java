@@ -2,7 +2,7 @@
 // APCS pd0
 // HW47 -- Guess Again
 // 2021-12-15w
-// time spent:  hrs
+// time spent: .3 hrs
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -110,9 +110,12 @@ public class GuessNumber
   //main method to run it all
   public static void main( String[] args )
   {
-    GuessNumber g = new GuessNumber(1,2);
+    GuessNumber g = new GuessNumber(1,100);
     //start the game
     g.play();
+
+    GuessNumber p = new GuessNumber(1,2); //check if _trget is assigned to [1,2] inclusive
+    p.play();
   }
 
 }//end class GuessNumber
