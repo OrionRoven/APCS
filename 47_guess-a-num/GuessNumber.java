@@ -1,28 +1,17 @@
-// Team Incredibly Cohesive
-// APCS pd0
-// HW47 -- Guess Again
-// 2021-12-15w
-// time spent: .3 hrs
+/*
+Team Incredibly Cohesive
+APCS pd0
+HW47 -- Guess Again
+2021-12-14
+time spent: .6 hrs
 
-/***
- * class GuessNumber -- fun fun fun!
- *
- * SKELETON
- *
- * eg, sample interaction with end user:
- *
- * Guess a # fr 1-100: 50
- * Too high
- * Guess a # fr 1-49: 25
- * Too low
- * Guess a # fr 26-49: 38
- * Correct! It took 3 guesses
- ***/
+DISCO:
+*In order to randomly generate a number between 2 numbers, we decided to set _target to _lo, and then add Math.random() * (_hi-_lo+1); to _target
+*The +1 is necessary to generate a random number between 2 numbers inclusive of the larger number
 
-/***
-    DISCO:
-    QCC:
- ***/
+QCC:
+*Are there other ways to generate random numbers, perhaps a class in the API that lets us generate random numbers with certain limitations?
+ */
 import java.util.Scanner;
 
 public class GuessNumber
@@ -58,12 +47,25 @@ public class GuessNumber
     ==================================================*/
   public void playRec()
   {
+    int guess;
     System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
-    int guess = sc.nextInt();
+    guess = sc.nextInt();
 
     //3 cases: we either found it, too hi, too lo
-
-    /* YOUR CODE HERE */
+    if (guess == _target) {
+      System.out.println("Correct! It took "+_guessCtr+" guesses.");
+      return;
+    }
+    else if (guess < _target) {
+      _lo=guess;
+      System.out.println("Too low, try again...");
+    }
+    else {
+      _hi=guess;
+      System.out.println("Too high, try again...");
+    }
+    _guessCtr++;
+    playRec();
   }
 
 
@@ -73,9 +75,7 @@ public class GuessNumber
     ==================================================*/
   public void playIter()
   {
-
     int guess;
-
     while( true ) {
       System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
       guess = sc.nextInt();
@@ -83,7 +83,7 @@ public class GuessNumber
       //3 cases: we either found it, too hi, too lo
       if (guess == _target) {
         System.out.println("Correct! It took "+_guessCtr+" guesses.");
-        break;
+        return;
       }
       else if (guess < _target) {
         _lo=guess;
@@ -102,8 +102,8 @@ public class GuessNumber
   public void play()
   {
     //use one or the other below:
-    //playRec();
-    playIter();
+    playRec();
+    //playIter();
   }
 
 
