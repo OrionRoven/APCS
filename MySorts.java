@@ -81,9 +81,7 @@ public class MySorts {
             break;
         }
       }
-      // System.out.println("Number of Swaps: " + swapCtr);
-      // System.out.println("Number of Passes: " + passCtr);
-      // System.out.println("Number of Comparisons: " + compareCtr);
+
       System.out.println("Time complexity: " + (swapCtr + compareCtr + passCtr) + " of length " + data.size() + " array (n)");
       System.out.println("Number of swaps: " + swapCtr);
       System.out.println("Number of compares: " + compareCtr);
