@@ -139,7 +139,7 @@ public class StatPrinter
     Integer longest = max(_frequency);
     for (int i = 0; i < _frequency.size(); i ++) {
       double mult = _frequency.get(i) / longest;
-      int asteriCtr = (int)(_frequency.get(i) * mult);
+      int asteriCtr = (int)(longestBar * mult);
       String asteri = "";
       for (int iii = 0; iii < asteriCtr; iii ++) {
         asteri += "*";
