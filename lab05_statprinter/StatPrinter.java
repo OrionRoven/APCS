@@ -74,9 +74,9 @@ public class StatPrinter
       Integer adder = new Integer(0);
       _frequency.add( adder );
     }
-      System.out.println(_frequency);
-    for ( int x = 0; x < _frequency.size(); x ++) {
-      Integer newer =  _frequency.get(x) + 1;
+
+    for ( int x = 0; x < data.size(); x ++) {
+      Integer newer =  _frequency.get(data.get(x)) + 1;
       _frequency.set(data.get(x), newer);
     }
   }
@@ -109,24 +109,43 @@ public class StatPrinter
   //    isLocalMode(5) -> true
   public boolean isLocalMode( int i )
   {
-    return true;
+    if (i == 0 || i == _frequency.size() - 1) {
+      return false;
+    }
+    Boolean under = _frequency.get(i) > _frequency.get(i-1);
+    Boolean over = _frequency.get(i) > _frequency.get(i+1);
+    return (under && over);
   }
 
 
   //*************** QUESTION 04 **************************
   //postcond: returns list of modes in _frequency
-  // public ArrayList<Integer> getLocalModes()
-  // {
-  //
-  //
-  // }
+  public ArrayList<Integer> getLocalModes()
+  {
+    ArrayList<Integer> returned = new ArrayList<Integer>();
+    for(int i = 0; i < _frequency.size(); i ++) {
+      if (isLocalMode(i)) {
+        returned.add(i);
+      }
+    }
+    return returned;
+  }
 
 
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
   public void printHistogram( int longestBar )
   {
-    /* YOUR IMPLEMENTATION HERE */
+    Integer longest = max(_frequency);
+    for (int i = 0; i < _frequency.size(); i ++) {
+      double mult = _frequency.get(i) / longest;
+      int asteriCtr = (int)(_frequency.get(i) * mult);
+      String asteri = "";
+      for (int iii = 0; iii < asteriCtr; iii ++) {
+        asteri += "*";
+      }
+      System.out.println(i + " : " + asteri);
+    }
   }
 
 }//end class StatPrinter
