@@ -1,7 +1,7 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Standard duo configuration (Orion Roven, Max Schneider)
+// APCS pd7
 // L05 -- pulling it together
-// 2022-02-03r
+// 2022-02-03
 // time spent:  hrs
 
 
