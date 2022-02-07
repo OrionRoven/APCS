@@ -2,7 +2,7 @@
 // APCS pd7
 // L05 -- pulling it together
 // 2022-02-03
-// time spent:  hrs
+// time spent: 2.0 hrs
 
 
 /**
@@ -137,14 +137,15 @@ public class StatPrinter
   public void printHistogram( int longestBar )
   {
     Integer longest = max(_frequency);
-    for (int i = 0; i < _frequency.size(); i ++) {
-      double mult = _frequency.get(i) / longest;
-      int asteriCtr = (int)(longestBar * mult);
-      String asteri = "";
-      for (int iii = 0; iii < asteriCtr; iii ++) {
-        asteri += "*";
+    double mult = longestBar / longest;
+    for (int i = 0; i < _frequency.size(); i++)
+    {
+      String ast  = "";
+      for (int x = 0; x < (int) (mult * _frequency.get(i)); x++)
+      {
+        ast += "*";
       }
-      System.out.println(i + " : " + asteri);
+      System.out.println(i + " : " + ast);
     }
   }
 
