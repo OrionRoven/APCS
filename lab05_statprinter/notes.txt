@@ -2,8 +2,15 @@ Standard duo configuration (Orion Roven, Max Schneider)
 APCS pd7
 L05 -- pulling it together
 2022-02-03
-time spent:  hrs
+time spent: 2.0 hrs
 
 DISCO:
+*Interesting applications of histograms
+*Helpful to have methods like max to increase efficiency later on
+*Histogram is easy when you use the idea of a multiplier (The ratio of the highest value to the longest bar) to determine how many asterisks to print
+*Having an instance variable like _frequency opens up a lot of statistical possibilities.
+*You have to check to ensure not first or last in isLocalMode
 
 QCC:
+*why did we use the Integer class
+*is there a cleaner way to list the requirement to be a localMode
