@@ -2,7 +2,7 @@
 // APCS
 // HW61: Instructions so Simple...
 // 2/8/2022
-// Time Spent:
+// Time Spent: .4 hrs
 /***
   class MergeSort
   Implements mergesort on array of ints.
@@ -63,11 +63,26 @@ public class MergeSort
   {
     if (arr.length == 1) {
         return arr;
-    } else {
-      int[] uno = new int[arr.length / 2]; //split deck in half
-      int[] dos = new int[arr.length - uno.length];
-      for (int x < arr.length / 2)
     }
+
+    int splitIndex = arr.length / 2;
+    int[] uno = new int[splitIndex];
+    int[] dos = new int[arr.length - splitIndex];
+
+    for (int i = 0; i < uno.length; i++) {
+      uno[i] = arr[i];
+    }
+
+    for (int i = 0; i < dos.length; i++) {
+      dos[i] = arr[splitIndex + i];
+    }
+
+    uno = sort(uno);
+    dos = sort(dos);
+
+    int[] mergedunodos = merge(uno, dos);
+
+    return mergedunodos;
 
   }//end sort()
 
@@ -112,7 +127,7 @@ public class MergeSort
       printArray( merge(arr1,arr0) );
 
       System.out.println("\nMerging arr4 and arr6: ");
-      printArray( merge(arr4,arr6) );
+      printArray( merge(sort(arr4),sort(arr6)) );
 
       System.out.println("\nSorting arr4-7...");
       printArray( sort( arr4 ) );
