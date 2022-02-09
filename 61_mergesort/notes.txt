@@ -1,0 +1,22 @@
+Standard Duo Configuraton (Orion Roven, Max Schneider)
+APCS
+HW61: Instructions so Simple...
+2/8/2022
+Time Spent:
+
+DISCO:
+It is very hard to make a group follow a set of instructions
+People can be abrasive
+Working together may be hard, but it is very effective
+
+QCCs:
+*Is this really the best way?
+* How is this applicable to java
+*Would it not be better to stop at like 5-6 cards instead of 2
+*What happens if someone gets 3 cards?
+
+THINKER FIRMWARE:
+*if given multiple cards, split and give to People
+*if given one card, give it back
+*when cards are returned, merge sort
+*give merged cards back up chain
