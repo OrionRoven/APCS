@@ -1,0 +1,21 @@
+Orion Roven
+APCS pd7
+HW60: A Termite is-a Turtle, a Thinker is-a Turtle
+2/7/22
+time elapsed: hrs
+
+DISCO:
+
+When a thinker receives 2 sorted decks, they must perform the sort algorithm discussed in class (see thinker firmware)
+
+QCC:
+
+Is it necessary to pass 1 card to 2 different thinkeren just to have it passed back?
+
+
+Thinker Firmware:
+
+* If you an unsorted deck of length > 2, split it and pass it to 2 other thinkeren
+* If you receive a deck of length 1, return it to the thinker that gave it to you
+* If you receive a deck of length 2, sort it then return it to the thinker that gave it to you
+* If a thinker recieves 2 sorted decks, they must look at the first card of each deck and put the lower card in a new (sorted) deck and repeat until fully sorted

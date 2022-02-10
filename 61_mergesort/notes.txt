@@ -1,0 +1,24 @@
+Standard Duo Configuraton (Orion Roven, Max Schneider)
+APCS
+HW61: Instructions so Simple...
+2/8/2022
+Time Spent: .4 hrs
+
+DISCO:
+* When copying the second deck from the original input array it is helpful to have a splitIndex variable that represents where the deck was split.
+* It is very hard to make a group follow a set of instructions.
+* People can be abrasive.
+* Working together may be hard, but it is very effective
+
+QCCs:
+* Is this really the best way?
+* How is this applicable to java?
+* Would it not be better to stop at like 5-6 cards instead of 2?
+* What happens if someone gets 3 cards?
+  -Split into two unequal decks and pass to other thinkeren
+
+THINKER FIRMWARE:
+* If given one card, give it back.
+* Otherwise, split the deck in two and pass it to two other thinkeren.
+* If you receive two sorted decks, merge them.
+* To merge, look at the top card of both decks, put the lower card face up in a new pile. Continue until you have one sorted deck.
