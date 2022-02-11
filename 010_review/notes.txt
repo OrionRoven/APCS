@@ -1,0 +1,9 @@
+TNPG: Standard Duo Configuration -- Orion Roven, Max Schneider, Nakib Abedin
+APCS pd07
+HW63 -- cobo Lab
+2022-02-11f
+
+Disco:
+- In new versions of java, you do not need to specify the type of ArrayList for the constructor call.
+QCC:
+- How many positive and negative adjectives do we need
