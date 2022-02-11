@@ -17,13 +17,6 @@ public class Review {
 
   private static final String SPACE = " ";
 
-  public static void main(String[] args) {
-    System.out.println(sentimentVal("happily"));
-    System.out.println(sentimentVal("terrible"));
-    System.out.println(sentimentVal("cold"));
-    System.out.println(totalSentiment("SimpleReview.txt"));
-  }
-
   public static double totalSentiment (String fileName) {
     String file = textToString(fileName);
     ArrayList<Integer> spacePlaces = new ArrayList<>();
@@ -37,7 +30,6 @@ public class Review {
     spacePlaces.add(file.length());
     for (int x = 0; x < spacePlaces.size() - 1 ;x++) {
       String word = file.substring(spacePlaces.get(x), spacePlaces.get(x+1));
-      System.out.println(removePunctuation(word).trim());
       double sentiment = sentimentVal(removePunctuation(word).trim());
       total+=sentiment;
     }
@@ -206,6 +198,64 @@ public class Review {
   }
 
   public static String fakeReview (String fileName){
-    return fileName;
+    String file = textToString(fileName);
+    String output = "";
+    ArrayList<Integer> spacePlaces = new ArrayList<>();
+    spacePlaces.add(0);
+    double total = 0;
+    for (int x = 0; x < file.length(); x ++) {
+      if(file.substring(x,x+1).equals(SPACE)) {
+        spacePlaces.add(x);
+      }
+    }
+    spacePlaces.add(file.length());
+    for (int x = 0; x < spacePlaces.size() - 1 ;x++) {
+      String word = file.substring(spacePlaces.get(x), spacePlaces.get(x+1)).trim();
+      if (word.substring(0,1).equals("*")) {
+        word = randomAdjective();
+      }
+      output+=word;
+      output+=" ";
+    }
+
+    return output;
+  }
+
+  public static String fakeReview (String fileName, boolean pos){
+    String file = textToString(fileName);
+    String output = "";
+    ArrayList<Integer> spacePlaces = new ArrayList<>();
+    spacePlaces.add(0);
+    double total = 0;
+    for (int x = 0; x < file.length(); x ++) {
+      if(file.substring(x,x+1).equals(SPACE)) {
+        spacePlaces.add(x);
+      }
+    }
+    spacePlaces.add(file.length());
+    for (int x = 0; x < spacePlaces.size() - 1 ;x++) {
+      String word = file.substring(spacePlaces.get(x), spacePlaces.get(x+1)).trim();
+      if (word.substring(0,1).equals("*")) {
+        if (pos) {
+          word = randomPositiveAdj();
+        } else {
+          word = randomNegativeAdj();
+        }
+      }
+      output+=word;
+      output+=" ";
+    }
+
+    return output;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(sentimentVal("happily"));
+    System.out.println(sentimentVal("terrible"));
+    System.out.println(sentimentVal("cold"));
+    System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println(fakeReview("SimpleReview.txt"));
+    System.out.println(fakeReview("SimpleReview.txt", true));
+    System.out.println(fakeReview("SimpleReview.txt", false));
   }
 }
