@@ -1,8 +1,8 @@
-TNPG: Standard Duo Configuration -- Orion Roven, Max Schneider, Nakib Abedin
-APCS pd07
-HW63 -- cobo Lab
-2022-02-11f
-time spent: 2 hrs
+Standard Duo Configuration: Orion Roven, Nakib Abedin, Max Schneider
+APCS period 8
+Lab06 -- Read/Review/Expand
+2022-2-14
+time elapsed: 3.7 hrs
 
 DISCO:
 - In new versions of java, you do not need to specify the type of ArrayList for the constructor call.
