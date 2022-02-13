@@ -1,4 +1,14 @@
 Standard Duo Configuration: Orion Roven, Nakib Abedin, Max Schneider
+APCS period 8
+Lab06 -- Read/Review/Expand
+2022-2-14
+time elapsed: 3.7 hrs
+
+Summary of experience:
+  cobo made us do a lot of useless things.
+  We should have made a word parser.
+  Hashmaps can be used to parse .csv and .txt files.
+  We realized how powerful .trim() can be.
 
 errata:
 

@@ -46,3 +46,22 @@ Activity 4
   6) So that the * character doesn't remain in the review.
 
   7) Only use positive words with sentimentVal > 5
+
+Activity 5
+
+1) We are interested in human psychology
+2) We created two files (Happy and Person). We used Happy to determine if an instance of Person is happy.
+3) public static int howHappy(int iterations, Person p). We made this static because we didn't want to instantiate to use it. The iterations and p parameters allow the user to test it for a specified number of times for a specified person.
+4) happy.substring(0) just returns the entire String using the substring method. happy.compareTo(sad) compares the lengths of happy and sad and returns an integer that tells us if the length of happy is greater than, equal to, or less than sad.
+5) if(output > 0 && output != 0). We could have just done if(output > 0)
+6)
+while(iterations > 0){
+    if(p.isHappy){
+      output += 1;
+    }else{
+      output -= 1;
+    }
+    iterations--;
+}
+
+The loop will iterate for the number of times that the user chooses to and will update the output variable to keep track of results.
