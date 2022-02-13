@@ -4,7 +4,45 @@ HW63 -- cobo Lab
 2022-02-11f
 time spent: 2 hrs
 
-Disco:
+DISCO:
 - In new versions of java, you do not need to specify the type of ArrayList for the constructor call.
 QCC:
 - How many positive and negative adjectives do we need
+
+Activity 1
+  1a) public static double sentimentVal( String word )
+  1b) It requires a String parameter
+  1c) Yes, double because each word has a sentimentVal of a double
+
+  3a) Yes, compilable
+  3b) Not compilable, because it doesn't return a String
+  3c) No because sentimentVal only takes 1 parameter
+
+Activity 2
+  4) We use .substring() to find the indices of all of the spaces, then we use those indices to separate the words. Afterwards, we run sentimentVal on each word and return the average.
+
+  5a) Yes, the ratings return anywhere from 1 to 5 stars and make sense given the review.
+  5b) We could implement the totalSentiment of phrases to be more accurate.
+
+  6a) They used a < symbol which would likely always return 4 stars
+  6b) Change to a > and adjust star rating from 1-5 and adjust totalSentiment comparison values.
+
+Activity 3
+  3) indexOf() returns the first index of a specific String within a String. The josh.substring(int a, int b) returns the String within josh from index a to b-1 inclusive.
+
+  5) static methods can be used without creating an instance of the class. Nonstatic methods require instantiation to be used
+
+  6) Tell it pull directly from posAdjectives or negAdjectives depending on what it wants.
+
+Activity 4
+  1) To destroy competition
+
+  2) To boost the reviews of a business/product
+
+  3) Use extreme positive or negative words rather than only slightly positive or negAdjectives. First determine which one to do (pos or neg) then use absolute value.
+
+  5) returns the 1st index of oneWord (2nd position) to the end
+
+  6) So that the * character doesn't remain in the review.
+
+  7) Only use positive words with sentimentVal > 5
