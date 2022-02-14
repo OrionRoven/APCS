@@ -4,7 +4,7 @@
 // time elapsed: _hrs
 
 public class BunnyEars {
-  public int bunnyEars(int bunnies) {
+  public static int bunnyEars(int bunnies) {
     if (bunnies < 1) {
       return 0;
     }

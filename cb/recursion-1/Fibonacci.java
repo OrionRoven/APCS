@@ -4,7 +4,7 @@
 // time elapsed: _hrs
 
 public class Fibonacci {
-    public int fibonacci (int n) {
+    public static int fibonacci (int n) {
       if (n == 0) {
         return 0;
       }
