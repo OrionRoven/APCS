@@ -3,7 +3,7 @@
 // 2022-2-15
 // time elapsed: _hrs
 
-public class BunnyEars {
+public class BunnyEars2 {
   public static int bunnyEars2(int bunnies) {
     if (bunnies == 0) {
       return 0;

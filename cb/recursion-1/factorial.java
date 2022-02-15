@@ -1,7 +1,7 @@
 // Standard Valentine Configuration: Orion Roven, Max Schneider
 // APCS period 8
 // 2022-2-15
-// time elapsed: _hrs
+// time elapsed: All of them took <5 minutes
 
 public class Factorial {
   public static int factorial(int n) {

@@ -1,3 +1,9 @@
+// Standard Valentine Configuration: Orion Roven, Max Schneider
+// APCS period 8
+// 2022-2-15
+// time elapsed: _hrs
+
+
 public class Count7 {
   public static int count7 (int n) {
     int ctr = 0;
