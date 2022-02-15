@@ -15,4 +15,9 @@ public class ChangeXY {
     }
     return first + changeXY(str.substring(1));
   }
+  public static void main(String[] args) {
+    System.out.println(changeXY("codex"));
+    System.out.println(changeXY("xxhixx"));
+    System.out.println(changeXY("yhiyhiy"));
+  }
 }
