@@ -1,0 +1,13 @@
+TNPG: Standard Duo Configuration (Nakib Abedin, Orion Roven, Max Schneider)
+APCS pd07
+HW65 -- How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+2022-02-17r
+Time Spent: 1.0 hr
+
+DISCOS:
+1) After a board of size 4, there seems to be a solution for every board size after.
+2) Every board after size 30 x 30 takes a really long time to run.
+
+QCC:
+1) Why does it take so much longer after testing a board of size 30 x 30?
+
