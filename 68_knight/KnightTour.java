@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // Standard Duo Configuration| Nakib Abedin, Orion Roven, Max Schneider
 // APCS pd07
 // HW68 -- recursively probing for a closed cycle
 // 2022-03-02w
 // time spent: 2.0 hrs
+=======
+// Clyde Sinclair
+// APCS pd0
+// HW68 -- recursively probing for a closed cycle
+// 2022-02-28m
+// time spent:  hrs
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
 
 /***
  * SKELETON
@@ -14,6 +22,7 @@
  * $ java KnightTour
  * $ java KnightTour [N]
  *
+<<<<<<< HEAD
  * ALGO:
  * Step 1: Place a knight in the most upperleft square.
  * Step 2: Place another knight an “L” away according to the order. If impossible, place in next location of order
@@ -32,6 +41,16 @@
  *
  * Mean execution times for boards of size n*n:
  * n=5   1.714s    across 1 execution
+=======
+ * ALGO
+ *
+ * DISCO
+ *
+ * QCC
+ *
+ * Mean execution times for boards of size n*n:
+ * n=5   __s    across __ executions
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
  * n=6   __s    across __ executions
  * n=7   __s    across __ executions
  * n=8   __s    across __ executions
@@ -92,25 +111,45 @@ public class KnightTour
 class TourFinder
 {
   //instance vars
+<<<<<<< HEAD
   private int[][] _board;
+=======
+  public int[][] _board;
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
   private int _sideLength; //board has dimensions n x n
   private boolean _solved = false;
 
   //constructor -- build board of size n x n
   public TourFinder( int n )
   {
+<<<<<<< HEAD
     _sideLength = n ;
 
     //init 2D array to represent square board with moat
     _board = new int[_sideLength + 4][_sideLength + 4];
+=======
+    _sideLength = n + 4;
+
+    //init 2D array to represent square board with moat
+    _board = new int[_sideLength][_sideLength];
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
 
     //SETUP BOARD --  0 for unvisited cell
     //               -1 for cell in moat
     //---------------------------------------------------------
+<<<<<<< HEAD
     for (int i = 0; i < _sideLength + 4; i ++) {
       for (int e = 0; e < _sideLength + 4; e ++) {
         if (i < 2 || e < 2 || i > _sideLength + 1|| e > _sideLength + 1) {
           _board[i][e] = -1;
+=======
+    for (int i = 0; i < _sideLength; i ++) {
+      for (int e = 0; e < _sideLength; e ++) {
+        if (i < 2 || e < 2 || i > _sideLength - 2|| e > _sideLength - 2) {
+          _board[i][e] = -1;
+        } else {
+          _board[i][e] = 0;
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
         }
       }
     }
@@ -161,22 +200,38 @@ class TourFinder
    * @param y      starting y-coord
    * @param moves  number of moves made so far
    **/
+<<<<<<< HEAD
 
+=======
+/*****************
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
   public void findTour( int x, int y, int moves )
   {
     //delay(50); //slow it down enough to be followable
 
     //if a tour has been completed, stop animation
+<<<<<<< HEAD
     if ( _solved == true ) System.exit(0);
 
     //primary base case: tour completed
     if ( moves > (_sideLength )* (_sideLength ) ) {
       _solved = true;
+=======
+    if ( ??? ) System.exit(0);
+
+    //primary base case: tour completed
+    if ( ??? ) {
+      ???
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
       System.out.println( this ); //refresh screen
       return;
     }
     //other base case: stepped off board or onto visited cell
+<<<<<<< HEAD
     if ( _board[x][y] != 0 ) {
+=======
+    if ( ??? ) {
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
       return;
     }
     //otherwise, mark current location
@@ -184,7 +239,11 @@ class TourFinder
     else {
 
       //mark current cell with current move number
+<<<<<<< HEAD
       _board[x][y] = moves;
+=======
+      _board[x][y] = ???
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
 
       System.out.println( this ); //refresh screen
 
@@ -199,6 +258,7 @@ class TourFinder
        *     g . . . b
        *     . h . a .
       ???
+<<<<<<< HEAD
         ******************************************/
         findTour(x +1, y+2, moves + 1);
         findTour(x +2, y+1, moves + 1);
@@ -211,10 +271,20 @@ class TourFinder
       //If made it this far, path did not lead to tour, so back up...
       // (Overwrite number at this cell with a 0.)
         _board[x][y]=0;
+=======
+
+      //If made it this far, path did not lead to tour, so back up...
+      // (Overwrite number at this cell with a 0.)
+        ???
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
 
       System.out.println( this ); //refresh screen
     }
   }//end findTour()
+<<<<<<< HEAD
 
+=======
+  ******************************************/
+>>>>>>> 31a9e0f96787b03e9ca20f547b6523e04982811a
 
 }//end class TourFinder
