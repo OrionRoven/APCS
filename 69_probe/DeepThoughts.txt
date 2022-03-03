@@ -1,4 +1,4 @@
-Git Committers || Orion Roven, Jefford Shau, Joseph Othman
+JOJO || Jefford, Orion, Joseph Othman
 APCS pd7
 HW69: Making sense make sense
 03-03-22th
