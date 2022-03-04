@@ -1,11 +1,11 @@
-// JOJO: Jefford, Orion, Joseph Othman
-// APCS pd07
+// JOJO || Orion Roven, Jefford Shau, Joseph Othman
+// APCS pd7
 // HW69 -- maze solving (blind, depth-first)
 // 2022-03-03r
-// time spent: .6hrs
+// time spent: 0.7 hrs
 
 /***
- * SKELETON for
+ * SKEELTON for
  * class MazeSolver
  * Implements a blind depth-first exit-finding algorithm.
  * Displays probing in terminal.
@@ -16,18 +16,15 @@
  *
  * ALGORITHM for finding exit from starting position:
  *  From starting location, mark where you are with an @. Then, move in the first direction
- *  possible in the order: north, east, south. Continue to do this until you have either
+ *  possible in the order: north, east, south, west. Continue to do this until you have either
  *  solved the maze or ran into a dead end. If the hero meets a dead end, the hero places
  *  a breadcrumb in the form of a . and continues backwards until the hero has a move to
  *  perform onto a square that constitutes a legal move (either a # or the $). The hero
  *  continues to do this until it finds the end or gets stuck.
- *
  * DISCO
- *  
  *
  * QCC
  *  How can we improve our algorithm to show the shortest possible solution?
- *
  ***/
 
 //enable file I/O
