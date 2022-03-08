@@ -1,0 +1,12 @@
+Standard Duo Configuration| Orion Roven + Max Schneider + Nakib Abedin
+APCS pd07
+HW71-unmask
+2022-03-07
+Time Spent: 1.0 hr
+
+DISCO:
+1) There was a skeleton that we didn't realize was there until after we finsihed the homework and went above the allocated time. We chose to just keep the file that we implemented instead of going back to the skeleton.
+2) O(n) is the runtime for the algorithm because we only need to go through the array once.
+QCC:
+1) What does the algorithm do?
+2) What use does the algorithm provide?
