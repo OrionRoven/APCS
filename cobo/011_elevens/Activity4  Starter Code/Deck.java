@@ -54,16 +54,23 @@ public class Deck {
 	 * @return the number of undealt cards in this deck.
 	 */
 	public int size() {
-		return this.size;
+		return size;
 	}
 
 	/**
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
+
 	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-	}
+    for (int i = size-1; i >= 0; i--){
+            int rand = (int)(Math.random() * i);
+            Card temp = cards.get(rand);
+            cards.set(rand, cards.get(i));
+            cards.set(i, temp);
+    }
+  }
+
 
 	/**
 	 * Deals a card from this deck.
@@ -71,11 +78,12 @@ public class Deck {
 	 *         previously dealt.
 	 */
 	public Card deal() {
-		if (this.size > 0) {
-			size--;
-			return cards.get(size);
+		if (isEmpty()) {
+			return null;
 		}
-		return null;
+		size--;
+		Card c = cards.get(size);
+		return c;
 	}
 
 	/**
