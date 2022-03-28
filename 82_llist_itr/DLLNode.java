@@ -1,3 +1,11 @@
+/*
+Team A Random Word (Nina Jiang, Orion Roven, Ivina Wang )
+APCS pd7
+HW82-- Roll Your Own Iterator
+2022-03-28m
+time spent: 1 hr
+*/
+
 /*****************************************************
  * class DLLNode
  * Implements a node, for use in lists and other container classes.
@@ -55,7 +63,7 @@ public class DLLNode<T> {
     //main method for testing
     public static void main( String[] args )
 {
-/*********************
+  /*********************
 	//Below is an exercise in creating a linked list...
 
 	//Create a node
