@@ -1,3 +1,17 @@
+/*
+Team A Random Word (Nina Jiang, Orion Roven, Ivina Wang )
+APCS pd7
+HW84-- Stack: What Is It Good For?
+2022-03-30w
+time spent: 2 hr
+
+DISCO:
+* we could create a peek() in Latkes.java to help us with allMatched
+* the peek() method returns the object at the top of the stack without popping it.
+QCC:
+* Why is there nothing in our new stack?
+*/
+
 /***
  * class Latkes
  * v1
@@ -41,7 +55,7 @@ public class Latkes
   {
     String retStr = "";
     if ( isEmpty() )  return null;
-    retStr = _stack[ _stackSize---1 ];
+    retStr = _stack[ _stackSize --- 1 ];
     return retStr;
   }
 
@@ -60,9 +74,8 @@ public class Latkes
 
   public String peek()
   {
-    return _stack[_stackSize];
+    return _stack[ _stackSize - 1];
   }
-
 
 
   //main method for testing
@@ -72,44 +85,46 @@ public class Latkes
 
     tastyStack.push("aoo");
     tastyStack.push("boo");
-    tastyStack.push("coo");
-    tastyStack.push("doo");
-    tastyStack.push("eoo");
-    tastyStack.push("foo");
-    tastyStack.push("goo");
-    tastyStack.push("hoo");
-    tastyStack.push("ioo");
-    tastyStack.push("joo");
-    tastyStack.push("coocoo");
-    tastyStack.push("cachoo");
+    // tastyStack.push("coo");
+    // tastyStack.push("doo");
+    // tastyStack.push("eoo");
+    // tastyStack.push("foo");
+    // tastyStack.push("goo");
+    // tastyStack.push("hoo");
+    // tastyStack.push("ioo");
+    // tastyStack.push("joo");
+    // tastyStack.push("coocoo");
+    // tastyStack.push("cachoo");
 
     //cachoo
     System.out.println( tastyStack.pop() );
-    //coocoo
-    System.out.println( tastyStack.pop() );
-    //joo
-    System.out.println( tastyStack.pop() );
-    //ioo
-    System.out.println( tastyStack.pop() );
-    //hoo
-    System.out.println( tastyStack.pop() );
-    //goo
-    System.out.println( tastyStack.pop() );
-    //foo
-    System.out.println( tastyStack.pop() );
-    //eoo
-    System.out.println( tastyStack.pop() );
-    //doo
-    System.out.println( tastyStack.pop() );
-    //coo
-    System.out.println( tastyStack.pop() );
-    //boo
-    System.out.println( tastyStack.pop() );
-    //aoo
-    System.out.println( tastyStack.pop() );
+    // //coocoo
+    // System.out.println( tastyStack.pop() );
+    // //joo
+    // System.out.println( tastyStack.pop() );
+    // //ioo
+    // System.out.println( tastyStack.pop() );
+    // //hoo
+    // System.out.println( tastyStack.pop() );
+    // //goo
+    // System.out.println( tastyStack.pop() );
+    // //foo
+    // System.out.println( tastyStack.pop() );
+    // //eoo
+    // System.out.println( tastyStack.pop() );
+    // //doo
+    // System.out.println( tastyStack.pop() );
+    // //coo
+    // System.out.println( tastyStack.pop() );
+    // //boo
+    // System.out.println( tastyStack.pop() );
+    // //aoo
+    // System.out.println( tastyStack.pop() );
+    //
+    // //stack empty by now; SOP(null)
+    // System.out.println( tastyStack.pop() );
 
-    //stack empty by now; SOP(null)
-    System.out.println( tastyStack.pop() );
+    System.out.println( tastyStack.peek() );
     /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
