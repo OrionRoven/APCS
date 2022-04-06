@@ -26,25 +26,6 @@ Activity 1)
   6) Who scored one 3 pointer in their entire NBA career: Shaquille O'Neal
   7) Datasets for how many 3 pointers were scored by individual NBA stars in different.
   8) https://www.nba.com/stats/players/ (we can also determine statistics based on rebounds and other factors)
-  9) The data in the above site can impact the predictions of playoff brackets by artificial intelligence.
-  10) The data was collected by recording in-game stats throughout this NBA season.
-  11) Maybe Shaq doesn't want the fact that he only scored one 3 pointer throughout his whole career.
-
-Activity 2)
-  1) Name of object: Cereal
-  2) n/a
-  3) public class Cereal
-  4) 15 instance variables
-  5) String _name, String _type, int _cals, int _protein, int _fat, int _sodium, double _fiber, double _carbs, int _sugar, int _potassium, int _vitamins, int _shelf, double _weight, double _cups, double _rating
-  8) We can get the calorie density per weight.
-  9) What specific vitamins are in the cereal.
-  10) More instance variables.
 
 Activity 3)
   1) The temperature at Atlanta, Hartsfield - Jackson Atlanta International Airport, GA is 63.0F
-  2) The temperature at (KATW)Appleton-Outagamie, WI is 48.0F
-  3)  KATL: 72.0 degrees; Light Rain Fog/Mist (wind: 220 degrees)
-      KSAV: 84.0 degrees; Mostly Cloudy (wind: 220 degrees)
-      KATW: 48.0 degrees; Overcast and Windy (wind: 190 degrees)
-      Colder at KATL
-  4)
