@@ -1,21 +1,22 @@
 In N Out Burger (Orion Roven, Kosta Dubovskiy, Joseph Othman)
-APCS pd 7
-LAB08: America's Next Top Data Scientist
+APCS
+LAB08 --
 2022-04-06w
-time spent: 2.5 hrs
+time spent: 3 hrs
 
 DISCO
-
+Who the worst/best basketball players are
 
 QCC
+Why do you have to use a semi-colon rather than a colon when compiling with -classpath on a window's machine.
 
 
-<TNPG>'s CSV FLOW:
-<insert your description of your tools and workflow in creating, editing CSV files>
+In-N-Out's CSV FLOW:
+We can use regex to parse the CSV file by commas and white spaces, while storing the parsed data in corresponding arrays.
 
 
 TRUBZ
-<this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+javac-ing and java-ing with -classpath was very troublesome even with QAF assist.
 
 Activity 1)
   1) github.com, piazza.com
@@ -47,4 +48,8 @@ Activity 3)
       KSAV: 84.0 degrees; Mostly Cloudy (wind: 220 degrees)
       KATW: 48.0 degrees; Overcast and Windy (wind: 190 degrees)
       Colder at KATL
-  4)
+  4) There are 70 weather stations in Wisconsin.
+  5) Filter by current temperature from the weather station.
+  6) NSTU: Pago Pago, AS, Samoa
+  7) We can also answer west/east-most territory.
+  8) Almost none, we can copy and paste our southern-most code over.
