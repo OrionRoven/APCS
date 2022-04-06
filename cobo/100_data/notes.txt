@@ -24,7 +24,8 @@ Activity 1)
   4) Look at the column label/header, which will make evident the type of data in the entire column.
   5) Music, basketball
   6) Who scored one 3 pointer in their entire NBA career: Shaquille O'Neal
-
+  7) Datasets for how many 3 pointers were scored by individual NBA stars in different.
+  8) https://www.nba.com/stats/players/ (we can also determine statistics based on rebounds and other factors)
 
 Activity 3)
   1) The temperature at Atlanta, Hartsfield - Jackson Atlanta International Airport, GA is 63.0F
