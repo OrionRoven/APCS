@@ -1,3 +1,9 @@
+In N Out Burger (Orion Roven, Kosta Dubovskiy, Joseph Othman)
+APCS pd 7
+LAB08: America's Next Top Data Scientist
+2022-04-06w
+time spent: 2.5 hrs
+
 data sets:
 
 § http://www.kaggle.com
@@ -12,5 +18,5 @@ $ javac -classpath .:sinbad.jar -d . Driver.java
 $ java -classpath.:sinbad.jar Driver
 ```
 
-411 on sinbad 
+411 on sinbad
 https://berry-cs.github.io/sinbad/install-java

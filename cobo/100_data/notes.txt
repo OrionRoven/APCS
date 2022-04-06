@@ -1,8 +1,8 @@
 In N Out Burger (Orion Roven, Kosta Dubovskiy, Joseph Othman)
-APCS
-LAB08 --
+APCS pd 7
+LAB08: America's Next Top Data Scientist
 2022-04-06w
-time spent: .6 hrs
+time spent: 2.5 hrs
 
 DISCO
 
