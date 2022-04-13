@@ -1,3 +1,11 @@
+/*
+Team A Random Word (Nina Jiang, Orion Roven, Ivina Wang )
+APCS pd7
+HW91-- Deque the Halls
+2022-04-14r
+time spent: 1.0 hrs
+*/
+
 import java.util.LinkedList;
 
 public class MRKPirateBae {

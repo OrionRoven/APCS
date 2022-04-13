@@ -2,12 +2,11 @@ Team A Random Word (Nina Jiang, Orion Roven, Ivina Wang )
 
 APCS pd7
 
-HW90-- Swabbing the Deque
+HW91-- Deque the Halls
 
-2022-04-12w
+2022-04-14r
 
 time spent: 1.0 hrs
-
 
 ### Possible methods:
 * offerFirst(), offerLast()
