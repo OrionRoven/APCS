@@ -1,10 +1,14 @@
 Team A Random Word (Nina Jiang, Orion Roven, Ivina Wang )
+
 APCS pd7
+
 HW90-- Swabbing the Deque
+
 2022-04-12w
+
 time spent: 1.0 hrs
 
-###PLAN:
+### PLAN:
 * addFirst(), addLast()
 * peekFirst(), peekLast()
 * removeFirst(), removeLast()
