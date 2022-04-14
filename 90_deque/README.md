@@ -8,25 +8,29 @@ HW91-- Deque the Halls
 
 time spent: 1.0 hrs
 
-### Possible methods:
-* offerFirst(), offerLast()
-* pollFirst(), pollLast()
-* getFirst(), getLast()
-* removeFirstOccurrence(), removeLastOccurrence()
-* contains()
-* pop()
-* push()
-* iterator(), descendingIterator()
 
-### Implemented:
+### PLAN:
 * addFirst(), addLast()
 * peekFirst(), peekLast()
 * removeFirst(), removeLast()
 * isEmpty()
 * size()
 
-We import LinkedList and use its methods to implement adding and removing for Deque.
+### EXTRAS METHODS:
+* contains()
+* iterator(), descendingIterator()
+
+### OTHER METHODS:
+* offerFirst(), offerLast()
+* pollFirst(), pollLast()
+* getFirst(), getLast()
+* removeFirstOccurrence(), removeLastOccurrence()
+* pop()
+* push()
+
+
+We imported LinkedList and use its methods to implement adding and removing for Deque.
 Similar to what we did in the homework last night for ALQueue and LLQueue.
-We decided not to implement the methods in the Not implementing section because many of them were repetetive.
-For example getFirst() is only different from peekFirst() in that it returns null if the LinkedList is empty.
-We are not sure how to implement pop() and push() because they are used for stacks and we are using a linked list
+We decided not to implement the methods in the OTHER METHODS section because many of them were repetetive. For example getFirst() is only different from peekFirst() in that it returns null if the LinkedList is empty.
+However, we are not sure how to implement pop() and push() because they are used for stacks and we are using a linked list.
+We added additional methods like the iterator() and contains().

@@ -5,6 +5,7 @@ HW91-- Deque the Halls
 2022-04-14r
 time spent: 1.0 hrs
 */
+import java.util.Iterator;
 
 public interface Deque<T> {
 
@@ -19,8 +20,8 @@ public interface Deque<T> {
   public T removeLast();
   //public T pollFirst();
   //public T pollLast();
-  //public boolean removeFirstOccurrence();
-  //public boolean removeLastOccurrence();
+  // public boolean removeFirstOccurrence(T x);
+  // public boolean removeLastOccurrence(T x);
 
   //peek methods
   public T peekFirst();
@@ -35,7 +36,7 @@ public interface Deque<T> {
   //miscellaneous
   public int size();
   public boolean isEmpty();
-  //public boolean contains();
-  //public Iterator<T> iterator();
-  //public Iterator<T> descendingIterator();
+  public boolean contains(T x);
+  public Iterator<T> iterator();
+  public Iterator<T> descendingIterator();
 }

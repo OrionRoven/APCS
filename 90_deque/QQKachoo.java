@@ -7,6 +7,7 @@ time spent: 1.0 hrs
 */
 
 import java.util.LinkedList;
+import java.util.Iterator;
 
 public class QQKachoo<T> implements Deque<T> {
 
@@ -47,4 +48,18 @@ public class QQKachoo<T> implements Deque<T> {
   public boolean isEmpty() {
     return _list.isEmpty();
   }
+
+  //extra methods?
+  public boolean contains(T x){
+    return _list.contains(x);
+  }
+
+  public Iterator<T> iterator(){
+    return _list.iterator();
+  }
+
+  public Iterator<T> descendingIterator(){
+    return _list.descendingIterator();
+  }
+
 }
