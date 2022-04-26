@@ -11,6 +11,7 @@ public class CelebrityGame
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
+	 private Celebrity _gameCeleb;
 
 	/**
 	 * The GUI frame for the Celebrity game.
@@ -35,7 +36,7 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
-
+		_hat = new ArrayList<Celebrity>();
 	}
 
 	/**
@@ -48,7 +49,15 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return false;
+		boolean matches = false;
+
+		if (guess.trim().equalsIgnoreCase(_gameCeleb.getAnswer())) {
+			matches = true
+			_hat.remove(0);
+			if (_hat.size() > 0) {
+				_gameCeleb = _hat.get(0);
+			}
+		}
 	}
 
 	/**
@@ -83,7 +92,7 @@ public class CelebrityGame
 	 */
 	public boolean validateCelebrity(String name)
 	{
-		return false;
+		return name.length() >= 4;
 	}
 
 	/**
@@ -95,7 +104,7 @@ public class CelebrityGame
 	 */
 	public boolean validateClue(String clue, String type)
 	{
-		return false;
+		return clue.length() >= 10;
 	}
 
 	/**
@@ -105,7 +114,7 @@ public class CelebrityGame
 	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
+		return _hat.size();
 	}
 
 	/**
@@ -116,7 +125,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return null;
+		return ;
 	}
 
 	/**
