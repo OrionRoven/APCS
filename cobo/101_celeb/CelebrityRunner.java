@@ -1,3 +1,11 @@
+/*
+Team Cautious Crustaceans (Orion Roven, Joshua Yagupsky, Jonathan Song)
+APCS pd7
+L09 -- Some Folks Call It a Charades
+2022-04-26w
+time spent: 2 hrs
+*/
+
 /**
  * Starts the Celebrity Game application
  * @author cody.henrichsen
