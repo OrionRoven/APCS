@@ -15,5 +15,4 @@ public class SimpleGUIRunner
 		JFrame sample = new JFrame();
 		sample.setVisible(true);
 	}
-
 }

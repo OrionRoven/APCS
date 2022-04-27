@@ -30,16 +30,16 @@ public class CelebrityGame
 	 */
 	private ArrayList<Celebrity> _hat;
 
-	private Scanner _scanner;
-
+	//private Scanner _scanner;
+	private CelebrityFrame gameWindow;
 	/**
 	 * Builds the game and starts the GUI
 	 */
 	public CelebrityGame()
 	{
-		System.out.println("Hello and welcome to celebrity!!!");
 		_hat = new ArrayList<Celebrity>();
-		_scanner = new Scanner(System.in);
+		//_scanner = new Scanner(System.in);
+		gameWindow = new CelebrityFrame(this);
 		play();
 	}
 
@@ -52,11 +52,11 @@ public class CelebrityGame
 	*/
 	public void prepareGame()
 	{
-		String name = "";
-		String clue = "";
-		Celebrity c;
+		//String name = "";
+		//String clue = "";
+		//Celebrity c;
 		_hat = new ArrayList<Celebrity>();
-		System.out.println("Enter the names and clues for celebrities. Once you are done, type EXIT for the celebrity name.");
+		/*System.out.println("Enter the names and clues for celebrities. Once you are done, type EXIT for the celebrity name.");
 		while (true) {
 			System.out.println("Enter the celebrity name (blank to exit): ");
 			name = _scanner.nextLine();
@@ -71,7 +71,8 @@ public class CelebrityGame
 		for (int i = 0;i< _hat.size(); i++) {
 			c = _hat.remove((int)(_hat.size()*Math.random())); //Removes from a random location
 			_hat.add(c); //Moves it to the end
-		}
+		}*/
+		gameWindow.replaceScreen("START");
 	}
 
 	/**
@@ -104,7 +105,11 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-		long initTime;
+		if (_hat != null && _hat.size() > 0) {
+			this._gameCeleb = _hat.get(0);
+			gameWindow.replaceScreen("GAME");
+		}
+		/*long initTime;
 		String userGuess;
 		prepareGame(); //Sets up the celebrities
 		if (_hat.size() > 0) {
@@ -129,7 +134,7 @@ public class CelebrityGame
 				_hat.remove(0);
 				_gameCeleb = _hat.get(0);
 			}
-		}
+		}*/
 	}
 
 	/**
