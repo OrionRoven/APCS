@@ -32,6 +32,7 @@ public class CelebrityGame
 		System.out.println("Hello and welcome to celebrity!!!");
 		_hat = new ArrayList<Celebrity>();
 		_scanner = new Scanner(System.in);
+		play();
 	}
 
 	/**
@@ -43,16 +44,19 @@ public class CelebrityGame
 	*/
 	public void prepareGame()
 	{
-		String name = "NOT EMPTY";
+		String name = "";
 		String clue = "";
 		Celebrity c;
 		_hat = new ArrayList<Celebrity>();
-		System.out.println("Enter the names and clues for celebrities. Once you are done, create a blank celebrity.");
-		while (!name.equals("")) {
+		System.out.println("Enter the names and clues for celebrities. Once you are done, type EXIT for the celebrity name.");
+		while (true) {
 			System.out.println("Enter the celebrity name (blank to exit): ");
-			name = _scanner.next();
+			name = _scanner.nextLine();
+			if (name.equals("EXIT")) {
+				break;
+			}
 			System.out.println("Enter the clue for the celebrity: ");
-			clue = _scanner.next();
+			clue = _scanner.nextLine();
 			addCelebrity(name, clue, "");
 		}
 		//Shuffles the hat:
@@ -104,16 +108,18 @@ public class CelebrityGame
 			while (initTime + 60_000 > System.currentTimeMillis())
 			{
 				System.out.println("Who is it? ");
-				userGuess = _scanner.next();
+				userGuess = _scanner.nextLine();
 				if (processGuess(userGuess)) {
 					break;
 				}
 			}
 			if (initTime + 60_000 > System.currentTimeMillis()) {
-				System.out.println("Wow! You got the right answer in under a minute! Get ready, here's the next one!");
+				System.out.println("Wow! You got the right answer in under a minute!");
 			}
 			else {
 				System.out.println("Not this time! Here's the next one: ");
+				_hat.remove(0);
+				_gameCeleb = _hat.get(0);
 			}
 		}
 	}
