@@ -8,6 +8,6 @@ time spent: _hrs
   ~~1) Write up the behavior for the Celebrity class~~
   2) Implement basic functionality of the CelebrityGame class
   3) Write GUI related methods
-  4) Modify celebrity game to incorporate GUI
+  4) Open-ended activity
   5) Make celebrity subclasses and implement them
-  6) Open-ended activity
+  6) Modify celebrity game to incorporate GUI

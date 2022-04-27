@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Scanner;
 /**
  * The framework for the Celebrity Game project
  *
@@ -11,7 +11,7 @@ public class CelebrityGame
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
-	 private Celebrity _gameCeleb;
+	private Celebrity _gameCeleb;
 
 	/**
 	 * The GUI frame for the Celebrity game.
@@ -20,7 +20,9 @@ public class CelebrityGame
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
-	 private ArrayList<Celebrity> _hat;
+	private ArrayList<Celebrity> _hat;
+
+	private Scanner _scanner;
 
 	/**
 	 * Builds the game and starts the GUI
@@ -29,14 +31,35 @@ public class CelebrityGame
 	{
 		System.out.println("Hello and welcome to celebrity!!!");
 		_hat = new ArrayList<Celebrity>();
+		_scanner = new Scanner(System.in);
 	}
 
 	/**
 	 * Prepares the game to start by re-initializing the celebGameList and having the gameFrame open the start screen.
 	 */
+	/*
+	We keep asking the user to input the name and clue for a celeb, until the user passes an empty string for the celebrity name.
+	Each celebrity gets added to the _hat.
+	*/
 	public void prepareGame()
 	{
+		String name = "NOT EMPTY";
+		String clue = "";
+		Celebrity c;
 		_hat = new ArrayList<Celebrity>();
+		System.out.println("Enter the names and clues for celebrities. Once you are done, create a blank celebrity.");
+		while (!name.equals("")) {
+			System.out.println("Enter the celebrity name (blank to exit): ");
+			name = _scanner.next();
+			System.out.println("Enter the clue for the celebrity: ");
+			clue = _scanner.next();
+			addCelebrity(name, clue, "");
+		}
+		//Shuffles the hat:
+		for (int i = 0;i< _hat.size(); i++) {
+			c = _hat.remove((int)(_hat.size()*Math.random())); //Removes from a random location
+			_hat.add(c); //Moves it to the end
+		}
 	}
 
 	/**
@@ -52,12 +75,14 @@ public class CelebrityGame
 		boolean matches = false;
 
 		if (guess.trim().equalsIgnoreCase(_gameCeleb.getAnswer())) {
-			matches = true
+			matches = true;
 			_hat.remove(0);
 			if (_hat.size() > 0) {
 				_gameCeleb = _hat.get(0);
 			}
 		}
+
+		return matches;
 	}
 
 	/**
@@ -67,7 +92,30 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-
+		long initTime;
+		String userGuess;
+		prepareGame(); //Sets up the celebrities
+		if (_hat.size() > 0) {
+			_gameCeleb = _hat.get(0);
+		}
+		while (_hat.size() > 0){
+			System.out.println("Here is your clue: " + sendClue());
+			initTime = System.currentTimeMillis(); //Starts the clock
+			while (initTime + 60_000 > System.currentTimeMillis())
+			{
+				System.out.println("Who is it? ");
+				userGuess = _scanner.next();
+				if (processGuess(userGuess)) {
+					break;
+				}
+			}
+			if (initTime + 60_000 > System.currentTimeMillis()) {
+				System.out.println("Wow! You got the right answer in under a minute! Get ready, here's the next one!");
+			}
+			else {
+				System.out.println("Not this time! Here's the next one: ");
+			}
+		}
 	}
 
 	/**
@@ -82,7 +130,9 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		_hat.add(new Celebrity(name, guess));
+		if (validateCelebrity(name) && validateClue(guess, "")){
+			_hat.add(new Celebrity(name, guess));
+		}
 	}
 
 	/**
