@@ -68,7 +68,7 @@ public class Celebrity
 	@Override
 	public String toString()
 	{
-		return this._name;
+		return "The name of the celebrity is " + _name;
 	}
 
 }

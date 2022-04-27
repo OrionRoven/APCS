@@ -125,7 +125,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return ;
+		return _gameCeleb.getClue();
 	}
 
 	/**
@@ -136,6 +136,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return _gameCeleb.getAnswer();
 	}
 }
