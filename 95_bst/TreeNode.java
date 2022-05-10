@@ -1,3 +1,11 @@
+/*
+Team Cautious Crustaceans :: Orion Roven, Joshua Yagupsky, Johnathan Song
+APCS pd7
+HW95 -- Algorithm as Data Structure
+2022-05-10t
+time elapsed: .5 hrs
+*/
+
 /**
  * class TreeNode
  * SKELETON
@@ -20,7 +28,9 @@ public class TreeNode
    */
   TreeNode( int initValue )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._cargo = initValue;
+    _lt = null;
+    _rt = null;
   }
 
 
@@ -30,7 +40,9 @@ public class TreeNode
    */
   TreeNode( int initValue, TreeNode initLeft, TreeNode initRight )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._cargo = initValue;
+    this._lt = initLeft;
+    this._rt = initRight;
   }
 
 
@@ -39,7 +51,7 @@ public class TreeNode
    */
   TreeNode getLeft()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return this._lt;
   }
 
 
@@ -48,7 +60,7 @@ public class TreeNode
    */
   TreeNode getRight()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return this._rt;
   }
 
 
@@ -57,7 +69,7 @@ public class TreeNode
    */
   int getValue()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    return this._cargo;
   }
 
 
@@ -66,7 +78,7 @@ public class TreeNode
    */
   void setLeft( TreeNode theNewLeft )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._lt = theNewLeft;
   }
 
 
@@ -75,16 +87,16 @@ public class TreeNode
    */
   void setRight( TreeNode theNewRight )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._rt = theNewRight;
   }
 
 
   /**
    * Sets the value of this tree node.
    */
-  void setValue( int theNewValue ) 
+  void setValue( int theNewValue )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._cargo = theNewValue;
   }
 
 }//end class

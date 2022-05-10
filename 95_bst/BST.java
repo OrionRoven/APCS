@@ -1,3 +1,11 @@
+/*
+Team Cautious Crustaceans :: Orion Roven, Joshua Yagupsky, Johnathan Song
+APCS pd7
+HW95 -- Algorithm as Data Structure
+2022-05-10t
+time elapsed: .5 hrs
+*/
+
 /**
  * class BST
  * v1:partial
@@ -24,7 +32,7 @@ public class BST
    */
   BST()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    this._root = null;
   }
 
 
@@ -35,12 +43,33 @@ public class BST
   public void insert( int newVal )
   {
     TreeNode newNode = new TreeNode( newVal );
-    /*** YOUR IMPLEMENTATION HERE ***/
+    TreeNode root = this._root;
+    if (root != null) {
+      insert(root, newNode);
+    }
+    else {
+      this._root = newNode;
+    }
   }
   //recursive helper for insert(int)
   public void insert( TreeNode stRoot, TreeNode newNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    if (newNode.getValue() < stRoot.getValue()) {
+      if (stRoot.getLeft() == null) {
+        stRoot.setLeft(newNode);
+      }
+      else{
+        insert(stRoot.getLeft(), newNode);
+      }
+    }
+    else {
+      if (stRoot.getRight() == null) {
+        stRoot.setRight(newNode);
+      }
+      else{
+        insert(stRoot.getRight(), newNode);
+      }
+    }
   }//end insert()
 
 
@@ -59,27 +88,45 @@ public class BST
   }
   public void preOrderTrav( TreeNode currNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    System.out.println(currNode.getValue());
+    if (currNode.getLeft() != null) {
+      preOrderTrav(currNode.getLeft());
+    }
+    if (currNode.getRight() != null) {
+      preOrderTrav(currNode.getRight());
+    }
   }
 
   //recurse left, process root, recurse right
   public void inOrderTrav()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    inOrderTrav( _root );
   }
   public void inOrderTrav( TreeNode currNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    if (currNode.getLeft() != null) {
+      inOrderTrav(currNode.getLeft());
+    }
+    System.out.println(currNode.getValue());
+    if (currNode.getRight() != null) {
+      inOrderTrav(currNode.getRight());
+    }
   }
 
   //recurse left, recurse right, process root
   public void postOrderTrav()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    postOrderTrav( _root );
   }
   public void postOrderTrav( TreeNode currNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    if (currNode.getLeft() != null) {
+      postOrderTrav(currNode.getLeft());
+    }
+    if (currNode.getRight() != null) {
+      postOrderTrav(currNode.getRight());
+    }
+    System.out.println(currNode.getValue());
   }
 
   //~~~~~~~~~~~~~^~~TRAVERSALS~~^~~~~~~~~~~~~~~~~~~~~~
@@ -89,8 +136,6 @@ public class BST
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
-
       BST arbol = new BST();
 
       //PROTIP: sketch state of tree after each insertion
@@ -115,7 +160,6 @@ public class BST
       arbol.postOrderTrav();
 
       System.out.println( "\n-----------------------------");
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }
 
 }//end class
