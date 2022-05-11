@@ -1,4 +1,12 @@
 /**
+Team Cautious Crustaceans :: Orion Roven, Joshua Yagupsky, Jonathan Song
+APCS pd7
+HW96 -- BSTs is the Perfect Place for Shade
+2022-05-11w
+time spent: .6 hrs
+*/
+
+/**
  * class BST
  * v1:partial
  * SKELETON
@@ -33,11 +41,25 @@ public class BST
    * returns pointer to node containing target,
    * or null if target not found
    *****************************************************/
-  TreeNode search( int target )
+  public TreeNode search( int target )
   {
-  	/*** YOUR IMPLEMENTATION HERE ***/
+  	return search(this._root, target);
   }
 
+  TreeNode search(TreeNode node, int target) {
+    if (node == null) {
+      return null;
+    }
+    else if (target == node.getValue()) {
+      return node;
+    }
+    else if (target < node.getValue()) {
+      return search(node.getLeft(), target);
+    }
+    else {
+      return search(node.getRight(), target);
+    }
+  }
 
   /*****************************************************
    * int height()
@@ -46,10 +68,16 @@ public class BST
    *****************************************************/
   public int height()
   {
-    if (_root == null) {
+    return height(_root);
+  }
+
+  int height(TreeNode node) {
+    if (node == null) {
       return 0;
     }
-    return 
+    else {
+      return 1 + Math.max(height(node.getLeft()),height(node.getRight()));
+    }
   }
 
 
@@ -59,7 +87,21 @@ public class BST
    *****************************************************/
   public int numLeaves()
   {
-  	/*** YOUR IMPLEMENTATION HERE ***/
+    return numLeaves(_root);
+  }
+
+  int numLeaves(TreeNode node) {
+    //if a node is null, it has no children which could be leaves
+    if (node == null) {
+      return 0;
+    }
+    //if the node has no children, it is a leaf
+    else if (node.getLeft() == null && node.getRight() == null) {
+      return 1;
+    }
+    else {
+      return numLeaves(node.getLeft()) + numLeaves(node.getRight());
+    }
   }
 
   /**
@@ -180,23 +222,32 @@ public class BST
     arbol.postOrderTrav();
 
     System.out.println( "\n-----------------------------");
+
+    System.out.println("Height: " + arbol.height()); //Should be 3
+    System.out.println("Number of leaves: " + arbol.numLeaves()); //Should be 3
+    System.out.println("Is there a 14? " + (arbol.search(14) != null));// false
+    System.out.println("Is there a 6? " + (arbol.search(6) != null));//true
     /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-
     /**
-       EXPECTED OUTPUT:
-       -----------------------------
-       pre-order traversal:
-       4 2 1 3 5 6
-       -----------------------------
-       in-order traversal:
-       1 2 3 4 5 6
-       -----------------------------
-       post-order traversal:
-       1 3 2 6 5 4
-       -----------------------------
+
+    4
+  2   5
+1  3    6
+
+        EXPECTED OUTPUT:
+        -----------------------------
+        pre-order traversal:
+        4 2 1 3 5 6
+        -----------------------------
+        in-order traversal:
+        1 2 3 4 5 6
+        -----------------------------
+        post-order traversal:
+        1 3 2 6 5 4
+        -----------------------------
     */
   }
 

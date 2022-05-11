@@ -1,4 +1,12 @@
 /**
+Team Cautious Crustaceans :: Orion Roven, Joshua Yagupsky, Jonathan Song
+APCS pd7
+HW96 -- BSTs is the Perfect Place for Shade
+2022-05-11w
+time spent: .6 hrs
+*/
+
+/**
  * class TreeNode
  * SKELETON
  * Implements a node for use in a binary tree.
